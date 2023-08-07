@@ -1,4 +1,4 @@
-import { useState , useEffect} from 'react';
+import React , { useState , useEffect} from 'react';
 import { Box , Stack, Typography } from '@mui/material';
 import { SideBar,Videos } from './';
 import { fetchFromApi } from '../utils/fetchFromApi';
@@ -6,12 +6,12 @@ import { fetchFromApi } from '../utils/fetchFromApi';
 const Feed = () => {
 
 
-  const [selectedCategory, setSelectedCategory] = useState('New');
+  const [selectedCategory, setSelectedCategory] = useState("New");
   const [videos, setVideos] = useState([]);
 
   useEffect(() => { 
     fetchFromApi(`search?part=snippet&q=${selectedCategory}`)
-    .then((data) => setVideos(data.items))
+      .then((data) => setVideos(data.items))
   }, [selectedCategory]);
 
   return (
@@ -30,7 +30,7 @@ const Feed = () => {
 
       <Box p={2} sx={{overflowY: 'auto', height: '90vh',flex: 2}} >
         <Typography variant="h4" fontweight="bold" mb={2} sx={{color:'white'}}>
-            {selectedCategory} <span style={{color: '#FC1503'}}>
+            {selectedCategory} <span style={{color: '#F31503'}}>
             videos
           </span>
         </Typography>
@@ -38,9 +38,10 @@ const Feed = () => {
         <Videos videos={videos} />
 
       </Box>
+      {/* bagadbambam */}
       
     </Stack>
-  )
+  );
 }
 
 export default Feed
