@@ -1,6 +1,5 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 Visit CamelTube here. https://cameltube.netlify.app/
 
 Use of React Hooks and Material UI for better user interface and components. Rapid Api was used for the perfect youtube Api to provide valid and neccesary data.
